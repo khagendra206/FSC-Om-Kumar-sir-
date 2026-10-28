@@ -1,0 +1,1106 @@
+
+/* ==========================================
+   GENERAL SETTINGS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.red-line {
+    width: 55px;
+    height: 3px;
+    background-color: #f00016;
+    margin: 25px 0;
+}
+
+.center-line {
+    margin: 18px auto 35px;
+}
+
+.section-small-title {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.red-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 17px 30px;
+    background-color: #f00016;
+    color: white;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.red-button:hover {
+    background-color: #d80015;
+}
+
+.blue-link {
+    display: inline-block;
+    color: #0874c9;
+    font-size: 17px;
+    text-align: center;
+}
+
+.outline-button {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid #0874d1;
+    color: #0874d1;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.outline-button:hover {
+    background-color: rgba(0, 100, 200, 0.06);
+}
+
+
+/* ==========================================
+   SECTION 1: NAVIGATION BAR
+========================================== */
+
+header {
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.nav-bar {
+    min-height: 95px;
+    padding: 15px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand-logo img {
+    width: 145px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #111111;
+    font-size: 17px;
+}
+
+.nav-links a:hover {
+    color: #0874c9;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    white-space: nowrap;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.sign-in {
+    color: #f00016;
+}
+
+.sign-up {
+    padding: 9px 19px;
+    border: 1px solid #f00016;
+    color: #f00016;
+    border-radius: 2px;
+}
+
+
+/* ==========================================
+   SECTION 2: HOME AND FEATURED APPS
+========================================== */
+
+.home-section {
+    padding: 65px 5%;
+    background-color: #f7f8fa;
+}
+
+.home-content {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.home-left h1 {
+    font-size: clamp(35px, 3.5vw, 58px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #050505;
+    letter-spacing: -1px;
+}
+
+.home-left p {
+    max-width: 680px;
+    margin-bottom: 40px;
+    font-size: 23px;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.featured-apps {
+    padding: 0 0 10px 35px;
+    border-left: 1px solid #eeeeee;
+}
+
+.featured-apps .center-line {
+    margin-bottom: 45px;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 28px;
+}
+
+.app-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.app-item img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.app-item h2 {
+    margin-bottom: 5px;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.app-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.featured-apps > .blue-link {
+    display: block;
+    margin-top: 55px;
+}
+
+
+/* ==========================================
+   SECTION 3: CATALYST AND ZIA AGENTS
+========================================== */
+
+.agents-section {
+    padding: 75px 5%;
+    background: linear-gradient(
+        to bottom,
+        #f7f8fa 0%,
+        #f7f8fa 50%,
+        #ffd900 50%,
+        #ffd900 100%
+    );
+}
+
+.agents-container {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.agent-card {
+    position: relative;
+    min-width: 0;
+    padding: 35px 7% 40px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.catalyst-card {
+    background-color: #eff6ff;
+}
+
+.zia-card {
+    background-color: #f7edfc;
+}
+
+.card-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 18px;
+    background-color: #e0edff;
+    border-radius: 7px 0 7px 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.zia-card .card-label {
+    background-color: #f0dffa;
+    color: #67267c;
+}
+
+.product-logo {
+    display: block;
+    width: 190px;
+    height: 65px;
+    margin: 0 auto 20px;
+    object-fit: contain;
+}
+
+.agent-card h2 {
+    max-width: 540px;
+    margin: 0 auto 15px;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #244a91;
+}
+
+.zia-card h2 {
+    color: #6a2679;
+}
+
+.agent-card p {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.agent-card .outline-button {
+    border-radius: 30px;
+}
+
+
+/* ==========================================
+   SECTION 4: ZOHO ONE
+========================================== */
+
+.zoho-one-section {
+    padding: 80px 5%;
+    background-color: #ffd900;
+}
+
+.zoho-one-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+}
+
+.zoho-one-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.zoho-one-icon {
+    width: 95px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.small-heading {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.zoho-one-left h2 {
+    margin: 5px 0;
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.zoho-one-left h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.zoho-one-left p {
+    max-width: 520px;
+    margin-bottom: 32px;
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.zoho-one-quote {
+    padding-left: 55px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 48px;
+}
+
+.zoho-one-quote blockquote {
+    margin-bottom: 25px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    line-height: 1.6;
+}
+
+.person-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.person-info img {
+    width: 90px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.person-info h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.person-info p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   SECTION 5: TRUSTED BRANDS
+========================================== */
+
+.brands-section {
+    padding: 85px 5%;
+    text-align: center;
+    background-color: white;
+}
+
+.brands-list {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    flex-wrap: wrap;
+}
+
+.brands-list img {
+    width: 115px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.brands-section > .blue-link {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   SECTION 6: ENTERPRISE
+========================================== */
+
+.enterprise-section {
+    padding: 100px 5%;
+    background-color: #f7f8fa;
+}
+
+.enterprise-content {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.enterprise-left h2 {
+    margin-bottom: 15px;
+    font-size: 46px;
+    font-weight: 400;
+}
+
+.enterprise-left p {
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.enterprise-right blockquote {
+    margin-bottom: 28px;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.enterprise-right .blue-link {
+    margin-top: 35px;
+}
+
+
+/* ==========================================
+   SECTION 7: CULTURE IMAGE
+========================================== */
+
+.culture-section {
+    padding: 0;
+    background-color: #f7f8fa;
+    text-align: center;
+}
+
+.culture-gallery {
+    display: block;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.culture-heading {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: -100px auto 0;
+    padding: 80px 20px 25px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    border-radius: 12px 12px 0 0;
+}
+
+.culture-heading h2 {
+    font-size: 42px;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+
+/* ==========================================
+   SECTION 8: CORE VALUES
+========================================== */
+
+.values-section {
+    padding: 65px 5% 80px;
+    background-color: white;
+}
+
+.values-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 65px 80px;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.value-item img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.value-item h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.value-item p {
+    font-size: 19px;
+    line-height: 1.75;
+}
+
+.values-button {
+    margin-top: 80px;
+    text-align: center;
+}
+
+
+/* ==========================================
+   SECTION 9: COMPANY STATISTICS
+========================================== */
+
+.zoho-stats-section {
+    padding: 95px 5% 85px;
+    background-color: #0861ad;
+    color: white;
+    text-align: center;
+}
+
+.zoho-stats-section > h2 {
+    margin-bottom: 22px;
+    font-size: 52px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+.green-line {
+    width: 52px;
+    height: 3px;
+    margin: 0 auto 75px;
+    background-color: #24df3e;
+}
+
+.stats-grid {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.stat-item {
+    padding: 0 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item h3 {
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.stat-item p {
+    font-size: 18px;
+}
+
+.stats-button {
+    display: inline-block;
+    margin-top: 100px;
+    padding: 17px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    font-size: 17px;
+}
+
+.stats-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ==========================================
+   SECTION 10: SIGN-UP AND FOOTER LINKS
+========================================== */
+
+.signup-footer {
+    padding: 0;
+    background-color: #f2f4f9;
+}
+
+.signup-content {
+    padding: 0 20px 75px;
+    text-align: center;
+}
+
+.signup-content h2 {
+    font-size: 49px;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.signup-content p {
+    margin: 10px 0 40px;
+    font-size: 35px;
+}
+
+.footer-columns {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 5% 75px;
+    display: grid;
+    grid-template-columns: 1.35fr 1.15fr 1fr 0.8fr;
+    gap: 45px;
+}
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    margin-bottom: 25px;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 13px;
+    color: #292929;
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.footer-column a:hover {
+    color: #0874c9;
+}
+
+
+/* ==========================================
+   SECTION 11: FINAL FOOTER
+========================================== */
+
+.final-footer {
+    padding: 75px 5% 40px;
+    background-color: #f2f4f9;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.legal-links {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 0;
+}
+
+.legal-links a {
+    padding: 0 13px;
+    border-right: 1px solid #cccccc;
+    color: #444444;
+    font-size: 15px;
+}
+
+.legal-links a:hover {
+    color: #0874c9;
+}
+
+.legal-links a:last-child {
+    border-right: none;
+}
+
+.copyright-area {
+    margin: 80px -5.6% -40px;
+    padding: 55px 20px 35px;
+    background-color: #0b0c1e;
+    color: #d7d8e1;
+}
+
+.copyright-area img {
+    display: block;
+    width: 105px;
+    height: 45px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+}
+
+.copyright-area p {
+    font-size: 19px;
+}
+
+
+/* ==========================================
+   TABLET SCREEN
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-bar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .featured-apps {
+        padding: 35px 0 0;
+        border-left: none;
+        border-top: 1px solid #eeeeee;
+    }
+
+    .agents-container {
+        grid-template-columns: 1fr;
+    }
+
+    .zoho-one-content,
+    .enterprise-content {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .zoho-one-quote {
+        padding-left: 0;
+        padding-top: 35px;
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .values-grid {
+        gap: 45px;
+    }
+
+    .value-item {
+        gap: 20px;
+    }
+
+    .value-item h2 {
+        font-size: 25px;
+    }
+
+    .value-item p {
+        font-size: 17px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 35px 0;
+    }
+
+    .stat-item:nth-child(3) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(4),
+    .stat-item:nth-child(5) {
+        border-right: none;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================
+   MOBILE SCREEN
+========================================== */
+
+@media (max-width: 600px) {
+
+    .nav-bar {
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .brand-logo img {
+        width: 115px;
+        height: 45px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+
+    .home-section,
+    .agents-section,
+    .zoho-one-section,
+    .brands-section,
+    .enterprise-section,
+    .values-section {
+        padding: 50px 6%;
+    }
+
+    .home-left h1 {
+        font-size: 35px;
+    }
+
+    .home-left p {
+        font-size: 18px;
+    }
+
+    .apps-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .app-item h2 {
+        font-size: 24px;
+    }
+
+    .agent-card {
+        padding: 45px 20px 30px;
+    }
+
+    .agent-card h2 {
+        font-size: 25px;
+    }
+
+    .agent-card p {
+        font-size: 16px;
+    }
+
+    .zoho-one-left {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .zoho-one-left h2 {
+        font-size: 43px;
+    }
+
+    .zoho-one-left h3 {
+        font-size: 21px;
+    }
+
+    .zoho-one-left p {
+        font-size: 18px;
+    }
+
+    .zoho-one-quote blockquote {
+        font-size: 23px;
+    }
+
+    .brands-list {
+        gap: 25px;
+    }
+
+    .brands-list img {
+        width: 90px;
+    }
+
+    .enterprise-left h2 {
+        font-size: 35px;
+    }
+
+    .enterprise-left p,
+    .enterprise-right blockquote {
+        font-size: 18px;
+    }
+
+    .culture-gallery {
+        height: 250px;
+    }
+
+    .culture-heading {
+        width: 92%;
+        margin-top: -45px;
+        padding: 40px 15px 20px;
+    }
+
+    .culture-heading h2 {
+        font-size: 27px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .value-item {
+        gap: 18px;
+    }
+
+    .value-item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .value-item h2 {
+        font-size: 23px;
+    }
+
+    .value-item p {
+        font-size: 16px;
+    }
+
+    .zoho-stats-section {
+        padding: 65px 5%;
+    }
+
+    .zoho-stats-section > h2 {
+        font-size: 33px;
+    }
+
+    .green-line {
+        margin-bottom: 45px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 0;
+    }
+
+    .stat-item {
+        padding: 0 5px;
+        border-right: none;
+    }
+
+    .stat-item h3 {
+        font-size: 33px;
+    }
+
+    .stat-item p {
+        font-size: 14px;
+    }
+
+    .stat-item:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .stats-button {
+        margin-top: 50px;
+        font-size: 14px;
+    }
+
+    .signup-content {
+        padding: 55px 15px;
+    }
+
+    .signup-content h2 {
+        font-size: 32px;
+    }
+
+    .signup-content p {
+        font-size: 23px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 20px 7% 50px;
+    }
+
+    .footer-column h3 {
+        font-size: 23px;
+    }
+
+    .footer-column a {
+        font-size: 15px;
+    }
+
+    .final-footer {
+        padding: 55px 15px 30px;
+    }
+
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .legal-links a {
+        font-size: 12px;
+        padding: 0 8px;
+    }
+
+    .copyright-area {
+        margin-top: 55px;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: -30px;
+        padding: 40px 15px 30px;
+    }
+
+    .copyright-area p {
+        font-size: 14px;
+    }
+}
